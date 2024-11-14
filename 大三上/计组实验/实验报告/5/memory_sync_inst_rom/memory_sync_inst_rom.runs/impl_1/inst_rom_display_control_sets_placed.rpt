@@ -1,0 +1,95 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon May 15 17:58:50 2023
+| Host         : lxmliu2002 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file inst_rom_display_control_sets_placed.rpt
+| Design       : inst_rom_display
+| Device       : xc7a200t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    23 |
+| Unused register locations in slices containing registers |    93 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      4 |            2 |
+|      5 |            4 |
+|      6 |            2 |
+|      8 |            2 |
+|      9 |            2 |
+|     10 |            2 |
+|     11 |            1 |
+|    16+ |            7 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             102 |           43 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             102 |           40 |
+| Yes          | No                    | No                     |              18 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             125 |           40 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+|      Clock Signal      |                     Enable Signal                     |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
++------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+|  lcd_module/clk_2_BUFG |                                                       | lcd_module/lcd_draw_module/draw_block_number1         |                1 |              1 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/set_xy_valid_reg_n_0       | lcd_module/lcd_draw_module/draw_block_number1         |                2 |              4 |
+|  clk_IBUF_BUFG         | lcd_module/touch_module/input_value[3]_i_1_n_0        | lcd_module/touch_module/input_value[31]_i_1_n_0       |                2 |              4 |
+|  lcd_module/clk_2_BUFG |                                                       | lcd_module/lcd_draw_module/display_count_y[4]_i_1_n_0 |                3 |              5 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/draw_wr_valid0             | lcd_module/lcd_draw_module/draw_data[4]_i_1_n_0       |                2 |              5 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_init_module/init_display_begin_reg_n_0 | lcd_module/lcd_init_module/init_display_begin0        |                5 |              5 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_init_module/display_x_h[4]_i_1_n_0     | lcd_module/lcd_init_module/init_display_begin0        |                2 |              5 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/draw_block_end             | lcd_module/lcd_draw_module/draw_block_number0         |                2 |              6 |
+|  clk_IBUF_BUFG         |                                                       | lcd_module/touch_module/clk_count0                    |                2 |              6 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/display_count_x[7]_i_2_n_0 | lcd_module/lcd_draw_module/display_count_x[7]_i_1_n_0 |                3 |              8 |
+|  clk_IBUF_BUFG         | lcd_module/touch_module/send_byte[0]_i_1_n_0          |                                                       |                2 |              8 |
+|  lcd_module/clk_2_BUFG |                                                       | lcd_module/lcd_draw_module/td_count_y0                |                5 |              9 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/td_count_x[8]_i_2_n_0      | lcd_module/lcd_draw_module/td_count_x[8]_i_1_n_0      |                4 |              9 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/draw_wr_valid0             |                                                       |                4 |             10 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_init_module/display_y0                 | lcd_module/lcd_init_module/init_display_begin0        |                5 |             10 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_init_module/sel                        | lcd_module/lcd_init_module/init_rom_pc0               |                4 |             11 |
+|  lcd_module/clk_2_BUFG |                                                       |                                                       |                8 |             18 |
+|  clk_IBUF_BUFG         |                                                       | lcd_module/touch_module/rst_count0                    |                6 |             22 |
+|  clk_IBUF_BUFG         |                                                       | lcd_module/touch_module/int_o_en_reg_0                |               13 |             26 |
+|  clk_IBUF_BUFG         | lcd_module/touch_module/input_value[31]_i_2_n_0       | lcd_module/touch_module/input_value[31]_i_1_n_0       |                4 |             28 |
+|  clk_IBUF_BUFG         | lcd_module/touch_module/input_valid_OBUF              | p_0_in                                                |                5 |             30 |
+|  clk_IBUF_BUFG         |                                                       | display_value[31]_i_1_n_0                             |               10 |             33 |
+|  clk_IBUF_BUFG         |                                                       |                                                       |               35 |             84 |
++------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+
+

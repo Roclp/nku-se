@@ -1,0 +1,225 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon May 15 17:58:44 2023
+| Host         : lxmliu2002 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file data_ram_display_control_sets_placed.rpt
+| Design       : data_ram_display
+| Device       : xc7a200t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   153 |
+| Unused register locations in slices containing registers |    85 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      4 |            2 |
+|      5 |            4 |
+|      6 |            2 |
+|      8 |          130 |
+|      9 |            2 |
+|     10 |            2 |
+|     11 |            1 |
+|    16+ |            9 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             103 |           48 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             107 |           56 |
+| Yes          | No                    | No                     |            1042 |          492 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             199 |           71 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+|      Clock Signal      |                     Enable Signal                     |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
++------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+|  lcd_module/clk_2_BUFG |                                                       | lcd_module/lcd_draw_module/draw_block_number1         |                1 |              1 |
+|  clk_IBUF_BUFG         | lcd_module/touch_module/input_value[3]_i_1_n_0        | lcd_module/touch_module/input_value[31]_i_1_n_0       |                3 |              4 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/set_xy_valid_reg_n_0       | lcd_module/lcd_draw_module/draw_block_number1         |                2 |              4 |
+|  lcd_module/clk_2_BUFG |                                                       | lcd_module/lcd_draw_module/display_count_y[4]_i_1_n_0 |                2 |              5 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/draw_wr_valid0             | lcd_module/lcd_draw_module/draw_data[4]_i_1_n_0       |                2 |              5 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_init_module/display_x_h[4]_i_1_n_0     | lcd_module/lcd_init_module/init_display_begin0        |                3 |              5 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_init_module/init_display_begin_reg_n_0 | lcd_module/lcd_init_module/init_display_begin0        |                4 |              5 |
+|  clk_IBUF_BUFG         |                                                       | lcd_module/touch_module/clk_count0                    |                2 |              6 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/draw_block_end             | lcd_module/lcd_draw_module/draw_block_number0         |                4 |              6 |
+|  clk_IBUF_BUFG         | lcd_module/touch_module/send_byte[0]_i_1_n_0          |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[26][7]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[27][23]_i_1_n_0                    |                                                       |                3 |              8 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/display_count_x[7]_i_2_n_0 | lcd_module/lcd_draw_module/display_count_x[7]_i_1_n_0 |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[30][7]_i_1_n_0                     |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[31][7]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[3][7]_i_1_n_0                      |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[31][23]_i_1_n_0                    |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[7][31]_i_1_n_0                     |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[28][15]_i_1_n_0                    |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[2][23]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[18][23]_i_1_n_0                    |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[27][31]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[10][15]_i_1_n_0                    |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM                                    |                                                       |                8 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[10][23]_i_1_n_0                    |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[10][31]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[10][7]_i_1_n_0                     |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[11][15]_i_1_n_0                    |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[11][23]_i_1_n_0                    |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[0][23]_i_1_n_0                     |                                                       |                8 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[11][31]_i_1_n_0                    |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[0][15]_i_1_n_0                     |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[0][31]_i_1_n_0                     |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[0][7]_i_1_n_0                      |                                                       |                8 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[21][7]_i_1_n_0                     |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[25][15]_i_1_n_0                    |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[25][31]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[14][31]_i_1_n_0                    |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[8][15]_i_1_n_0                     |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[1][31]_i_1_n_0                     |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[13][15]_i_1_n_0                    |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[19][31]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[16][23]_i_1_n_0                    |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[21][23]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[20][31]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[23][23]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[24][7]_i_1_n_0                     |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[12][31]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[15][31]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[18][15]_i_1_n_0                    |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[20][7]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[17][7]_i_1_n_0                     |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[13][7]_i_1_n_0                     |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[22][31]_i_1_n_0                    |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[13][23]_i_1_n_0                    |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[16][31]_i_1_n_0                    |                                                       |                8 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[19][15]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[19][7]_i_1_n_0                     |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[1][7]_i_1_n_0                      |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[21][31]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[12][7]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[15][7]_i_1_n_0                     |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[19][23]_i_1_n_0                    |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[22][7]_i_1_n_0                     |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[23][15]_i_1_n_0                    |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[24][15]_i_1_n_0                    |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[14][23]_i_1_n_0                    |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[11][7]_i_1_n_0                     |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[14][7]_i_1_n_0                     |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[17][23]_i_1_n_0                    |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[1][23]_i_1_n_0                     |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[18][31]_i_1_n_0                    |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[20][15]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[24][23]_i_1_n_0                    |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[25][7]_i_1_n_0                     |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[1][15]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[12][15]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[15][15]_i_1_n_0                    |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[16][7]_i_1_n_0                     |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[18][7]_i_1_n_0                     |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[24][31]_i_1_n_0                    |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[17][31]_i_1_n_0                    |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[26][15]_i_1_n_0                    |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[26][23]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[26][31]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[17][15]_i_1_n_0                    |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[25][23]_i_1_n_0                    |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[12][23]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[15][23]_i_1_n_0                    |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[22][23]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[13][31]_i_1_n_0                    |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[14][15]_i_1_n_0                    |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[16][15]_i_1_n_0                    |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[22][15]_i_1_n_0                    |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[23][31]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[23][7]_i_1_n_0                     |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[21][15]_i_1_n_0                    |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[20][23]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[8][7]_i_1_n_0                      |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[7][7]_i_1_n_0                      |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[2][15]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[2][31]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[2][7]_i_1_n_0                      |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[9][7]_i_1_n_0                      |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[9][23]_i_1_n_0                     |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[30][15]_i_1_n_0                    |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[30][31]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[28][7]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[5][31]_i_1_n_0                     |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[6][31]_i_1_n_0                     |                                                       |                4 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[4][15]_i_1_n_0                     |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[27][15]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[8][23]_i_1_n_0                     |                                                       |                8 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[31][15]_i_1_n_0                    |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[29][31]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[6][7]_i_1_n_0                      |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[9][31]_i_1_n_0                     |                                                       |                8 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[4][23]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[4][7]_i_1_n_0                      |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[29][7]_i_1_n_0                     |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[9][15]_i_1_n_0                     |                                                       |                7 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[5][15]_i_1_n_0                     |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[6][15]_i_1_n_0                     |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[6][23]_i_1_n_0                     |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[3][15]_i_1_n_0                     |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[7][15]_i_1_n_0                     |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[28][31]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[29][23]_i_1_n_0                    |                                                       |                5 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[28][23]_i_1_n_0                    |                                                       |                1 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[3][31]_i_1_n_0                     |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[29][15]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[3][23]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[5][23]_i_1_n_0                     |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[5][7]_i_1_n_0                      |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[8][31]_i_1_n_0                     |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[4][31]_i_1_n_0                     |                                                       |                8 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[30][23]_i_1_n_0                    |                                                       |                3 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[27][7]_i_1_n_0                     |                                                       |                6 |              8 |
+|  clk_IBUF_BUFG         | data_ram_module/DM[7][23]_i_1_n_0                     |                                                       |                2 |              8 |
+|  lcd_module/clk_2_BUFG |                                                       | lcd_module/lcd_draw_module/td_count_y0                |                7 |              9 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/td_count_x[8]_i_2_n_0      | lcd_module/lcd_draw_module/td_count_x[8]_i_1_n_0      |                4 |              9 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_init_module/display_y0                 | lcd_module/lcd_init_module/init_display_begin0        |                7 |             10 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_draw_module/draw_wr_valid0             |                                                       |                3 |             10 |
+|  lcd_module/clk_2_BUFG | lcd_module/lcd_init_module/sel                        | lcd_module/lcd_init_module/init_rom_pc0               |                4 |             11 |
+|  lcd_module/clk_2_BUFG |                                                       |                                                       |                9 |             18 |
+|  clk_IBUF_BUFG         |                                                       | lcd_module/touch_module/rst_count0                    |                6 |             22 |
+|  clk_IBUF_BUFG         |                                                       | lcd_module/touch_module/int_o_en_reg_0                |               13 |             26 |
+|  clk_IBUF_BUFG         | lcd_module/touch_module/input_value[31]_i_2_n_0       | lcd_module/touch_module/input_value[31]_i_1_n_0       |                4 |             28 |
+|  clk_IBUF_BUFG         | test_addr[31]_i_1_n_0                                 | p_0_in                                                |               11 |             32 |
+|  clk_IBUF_BUFG         | wdata0                                                | p_0_in                                                |               11 |             32 |
+|  clk_IBUF_BUFG         |                                                       | display_name[36]_i_1_n_0                              |               25 |             38 |
+|  clk_IBUF_BUFG         | addr[31]_i_2_n_0                                      | p_0_in                                                |                9 |             40 |
+|  clk_IBUF_BUFG         |                                                       |                                                       |               39 |             85 |
++------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+
+

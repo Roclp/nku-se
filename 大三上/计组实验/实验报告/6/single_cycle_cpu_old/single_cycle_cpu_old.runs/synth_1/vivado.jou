@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue May 30 13:02:39 2023
+# Process ID: 40364
+# Current directory: F:/Vivado Project/single_cycle_cpu_old/single_cycle_cpu_old.runs/synth_1
+# Command line: vivado.exe -log single_cycle_cpu_display.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source single_cycle_cpu_display.tcl
+# Log file: F:/Vivado Project/single_cycle_cpu_old/single_cycle_cpu_old.runs/synth_1/single_cycle_cpu_display.vds
+# Journal file: F:/Vivado Project/single_cycle_cpu_old/single_cycle_cpu_old.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source single_cycle_cpu_display.tcl -notrace

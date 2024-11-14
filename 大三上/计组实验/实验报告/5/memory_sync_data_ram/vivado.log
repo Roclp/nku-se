@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon May 15 20:15:33 2023
+# Process ID: 56492
+# Current directory: F:/Vivado Project/memory_sync_data_ram
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent50852 F:\Vivado Project\memory_sync_data_ram\memory_sync_data_ram.xpr
+# Log file: F:/Vivado Project/memory_sync_data_ram/vivado.log
+# Journal file: F:/Vivado Project/memory_sync_data_ram\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/Vivado Project/memory_sync_data_ram/memory_sync_data_ram.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Vivado/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 714.867 ; gain = 75.328
+open_hw
+update_compile_order -fileset sources_1
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 801.855 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/Port_#0004.Hub_#0002
+set_property PROGRAM.FILE {F:/Vivado Project/memory_sync_data_ram/memory_sync_data_ram.runs/impl_1/data_ram_display.bit} [get_hw_devices xc7a200t_0]
+current_hw_device [get_hw_devices xc7a200t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a200t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property PROGRAM.FILE {F:/Vivado Project/memory_sync_data_ram/memory_sync_data_ram.runs/impl_1/data_ram_display.bit} [get_hw_devices xc7a200t_0]
+program_hw_devices [get_hw_devices xc7a200t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1747.902 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property PROGRAM.FILE {F:/Vivado Project/memory_sync_data_ram/memory_sync_data_ram.runs/impl_1/data_ram_display.bit} [get_hw_devices xc7a200t_0]
+program_hw_devices [get_hw_devices xc7a200t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1750.195 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/Port_#0004.Hub_#0002
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 15 20:38:42 2023...
