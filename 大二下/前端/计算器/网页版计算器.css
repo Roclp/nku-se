@@ -1,0 +1,138 @@
+
+/* 网页版计算器样式布局 */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+.calculator {
+  display: flex; 
+  flex-direction: column; 
+  width: 375px; 
+  margin: 50px auto; /* 水平居中，并在上下方留出 50px 的空间 */
+  padding: 20px; /* 内边距 */
+  background-color: #f2f2f2; 
+  border: 1px solid #e6e6e6; /* 边框 */
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+/* 显示区域样式 */
+.output {
+  width: 100%; 
+  height: 80px; 
+  padding: 10px; 
+  background-color: #fff; 
+  border-radius: 5px; /* 圆角 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  margin-bottom: 10px; /* 下外边距为 10px */
+  display: flex; /*  flex 布局 */
+  justify-content: flex-end; /* 右对齐 */
+  align-items: flex-end; 
+  font-size: 32px; 
+  text-align: right; /* 右对齐 */
+  padding-right: 10px; 
+  overflow: hidden; /* 超出容器部分内容隐藏，防止溢出 */
+}
+
+/* 结果显示区域样式 */
+.result {
+  margin-top: auto; /* 结果框自动调整 */
+}
+
+.btn-row {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; /* 分散对齐 */
+  margin-bottom: 10px; 
+}
+
+/* 按钮样式 */
+button {
+  display: flex; 
+  justify-content: center; /* 居中对齐 */
+  align-items: center; 
+  width: 70px; 
+  height: 70px; 
+  border: none; /* 取消按钮边框 */
+  border-radius: 5px; 
+  font-size: 24px; 
+  color: #666; 
+  background-color: #fff; 
+  cursor: pointer; /* 鼠标悬停时出现手型光标 */
+  outline: none; /* 点击时去掉按钮的外边框 */
+  transition: all 0.2s; /* 当按钮状态发生变化时添加渐变效果，持续时间为 0.2 秒 */
+}
+
+/* 数字键悬浮样式 */
+.number:hover {
+  background-color: #e6e6e6; /* 设置数字键在悬浮状态下的背景颜色 */
+}
+
+/* 运算符键样式 */
+.operator {
+  color: #f90; 
+  background-color: #fff8dc; 
+  font-size: 20px; 
+}
+
+/* 运算符键悬浮样式 */
+.operator:hover {
+  background-color: #f0e68c; 
+}
+
+/* 清除全部AC键样式 */
+.clear {
+  background-color: #e56767da; 
+}
+
+/* 清除全部AC键悬浮样式 */
+.clear:hover {
+  background-color: #ddd; 
+}
+
+/* 等于=键样式 */
+.equal {
+  color: #fff; 
+  background-color: #f90; 
+  font-size: 24px; 
+}
+
+/* 等于=键悬浮样式 */
+.equal:hover {
+  background-color: #ffa500; 
+}
+
+/* 0 样式 */
+.zero {
+  width: 150px; 
+}
+
+/* 0 悬浮样式 */
+.zero:hover {
+  background-color: #e6e6e6; 
+}
+
+/* 小数点.样式 */
+.point {
+  color: #1e0303fd; 
+  background-color: rgba(16, 233, 175, 0.258); 
+}
+
+/* 小数点.悬浮样式 */
+.point:hover {
+  background-color: #ffa500; 
+}
+
+/* 清除最后一个CE键样式 */
+.clear-entry {
+  font-size: 20px; 
+  color: #666; 
+  background-color: #f08989ee; 
+}
+
+/* 清除最后一个CE键悬浮样式 */
+.clear-entry:hover {
+  background-color: #ddd; 
+}

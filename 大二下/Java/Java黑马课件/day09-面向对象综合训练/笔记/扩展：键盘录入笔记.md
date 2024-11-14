@@ -1,0 +1,191 @@
+# 一，键盘录入涉及到的方法如下：
+
+​	next（）、nextLine（）、nextInt（）、nextDouble（）。
+
+## 1）next（）、nextLine（）：
+
+可以接受任意数据，但是都会返回一个字符串。
+
+比如：键盘录入abc，那么会把abc看做字符串返回。
+
+​	   键盘录入123，那么会把123看做字符串返回。
+
+### 代码示例：
+
+```java
+Scanner sc = new Scanner(System.in);
+String s = sc.next();//录入的所有数据都会看做是字符串
+System.out.println(s);
+```
+
+### 代码示例：
+
+```java
+Scanner sc = new Scanner(System.in);
+String s = sc.nextLine();//录入的所有数据都会看做是字符串
+System.out.println(s);
+```
+
+## 2）nextInt（）：
+
+​	只能接受整数。
+
+比如：键盘录入123，那么会把123当做int类型的整数返回。
+
+​	  键盘录入小数或者其他字母，就会报错。
+
+### 代码示例：
+
+```java
+Scanner sc = new Scanner(System.in);
+int s = sc.nextInt();//只能录入整数
+System.out.println(s);
+```
+
+## 3）nextDouble（）：
+
+​	能接收整数和小数，但是都会看做小数返回。
+
+​	录入字母会报错。
+
+### 代码示例：
+
+```java
+Scanner sc = new Scanner(System.in);
+double d = sc.nextDouble();//录入的整数，小数都会看做小数。
+						//录入字母会报错
+System.out.println(d);
+```
+
+# 二，方法底层细节 ：
+
+### 第一个细节：
+
+next（），nextInt（），nextDouble（）在接收数据的时候，会遇到空格，回车，制表符其中一个就会停止接收数据。
+
+#### 代码示例：
+
+```java
+Scanner sc = new Scanner(System.in);
+double d = sc.nextDouble();
+System.out.println(d);
+//键盘录入：1.1 2.2//注意录入的时候1.1和2.2之间加空格隔开。
+//此时控制台打印1.1
+//表示nextDouble方法在接收数据的时候，遇到空格就停止了，后面的本次不接收。
+```
+
+```java
+Scanner sc = new Scanner(System.in);
+int i = sc.nextInt();
+System.out.println(i);
+//键盘录入：1 2//注意录入的时候1和2之间加空格隔开。
+//此时控制台打印1
+//表示nextInt方法在接收数据的时候，遇到空格就停止了，后面的本次不接收。
+```
+
+```java
+Scanner sc = new Scanner(System.in);
+String s = sc.next();
+System.out.println(s);
+//键盘录入：a b//注意录入的时候a和b之间加空格隔开。
+//此时控制台打印a
+//表示next方法在接收数据的时候，遇到空格就停止了，后面的本次不接收。
+```
+
+### 第二个细节：
+
+next（），nextInt（），nextDouble（）在接收数据的时候，会遇到空格，回车，制表符其中一个就会停止接收数据。但是这些符号 + 后面的数据还在内存中并没有接收。如果后面还有其他键盘录入的方法，会自动将这些数据接收。
+
+代码示例：
+
+```java
+Scanner sc = new Scanner(System.in);
+String s1 = sc.next();
+String s2 = sc.next();
+System.out.println(s1);
+System.out.println(s2);
+//此时值键盘录入一次a b(注意a和b之间用空格隔开)
+//那么第一个next();会接收a，a后面是空格，那么就停止，所以打印s1是a
+//但是空格+b还在内存中。
+//第二个next会去掉前面的空格，只接收b
+//所以第二个s2打印出来是b
+```
+
+### 第三个细节：
+
+nextLine（）方法是把一整行全部接收完毕。
+
+代码示例：
+
+```java
+Scanner sc = new Scanner(System.in);
+String s = sc.nextLine();
+System.out.println(s);
+//键盘录入a b(注意a和b之间用空格隔开)
+//那么nextLine不会过滤前面和后面的空格，会把这一整行数据全部接收完毕。
+```
+
+# 三、混用引起的后果
+
+上面说的两套键盘录入不能混用，如果混用会有严重的后果。
+
+代码示例：
+
+```java
+Scanner sc = new Scanner(System.in);//①
+int i = sc.nextInt();//②
+String s = sc.nextLine();//③
+System.out.println(i);//④
+System.out.println(s);//⑤
+```
+
+当代码运行到第二行，会让我们键盘录入，此时录入123。
+
+但是实际上我们录的是123+回车。
+
+而nextInt是遇到空格，回车，制表符都会停止。
+
+所以nextInt只能接受123，回车还在内存中没有被接收。
+
+此时就被nextLine接收了。
+
+所以，如果混用就会导致nextLine接收不到数据。
+
+# 四、结论（如何使用）
+
+键盘录入分为两套：
+
+- next（）、nextInt（）、nextDouble（）这三个配套使用。
+
+如果用了这三个其中一个，就不要用nextLine（）。
+
+- nextLine（）单独使用。
+
+如果想要整数，那么先接收，再使用Integer.parseInt进行类型转换。
+
+### 代码示例：
+
+```java
+Scanner sc = new Scanner(System.in);
+String s = sc.next();//键盘录入123
+System.out.println("此时为字符串" + s);//此时123是字符串
+int i = sc.nextInt();//键盘录入123
+System.out.println("此时为整数：" + i);
+```
+
+```java
+Scanner sc = new Scanner(System.in);
+String s = sc.nextLine();//键盘录入123
+System.out.println("此时为字符串" + s);//此时123是字符串
+int i = Integer.parseInt(s);//想要整数再进行转换
+System.out.println("此时为整数：" + i);
+```
+
+
+
+
+
+
+
+
+
