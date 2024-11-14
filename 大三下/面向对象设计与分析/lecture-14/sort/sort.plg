@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sort - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP732.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/sort.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"e:\zb\ood\case-study\sort\pivot_strategies.cpp"
+"e:\zb\ood\case-study\sort\quick_sort.cpp"
+"e:\zb\ood\case-study\sort\sort.cpp"
+"e:\zb\ood\case-study\sort\system_sort.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP732.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP733.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/sort.pdb" /debug /machine:I386 /out:"Debug/sort.exe" /pdbtype:sept 
+".\Debug\compare_func_factory.obj"
+".\Debug\input.obj"
+".\Debug\line_ptrs.obj"
+".\Debug\Options.obj"
+".\Debug\pivot_strategies.obj"
+".\Debug\quick_sort.obj"
+".\Debug\sort.obj"
+".\Debug\sort_at_adaptor.obj"
+".\Debug\StdAfx.obj"
+".\Debug\system_sort.obj"
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP733.tmp"
+<h3>Output Window</h3>
+Compiling...
+system_sort.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+pivot_strategies.cpp
+quick_sort.cpp
+sort.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+sort.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
